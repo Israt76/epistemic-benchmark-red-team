@@ -32,7 +32,7 @@ Scope of the audit:
 | Systems | 80 real classifiers, 9 real forecast archives, 150 simulated systems |
 | Scores audited | 10 in common use (accuracy, selective accuracy, hallucination rate, ECE, adaptive ECE, Brier, log loss, AUROC, E-AURC, penalty score), plus one hardened net-benefit score |
 | Exploit families | confidence gaming, strategic abstention, metric shopping, question-mix sensitivity |
-| Attacker | 13 hand-made exploits plus a remap optimised directly against each score; tuned on held-out splits |
+| Attacker | 13 hand-made exploits plus a remap optimised directly against each score; tuned on a development split and evaluated on a held-out split |
 | Decision yardsticks | threshold users under mixed (primary), low and high stakes; naive users who act on every answer |
 
 ## Key findings
@@ -80,7 +80,7 @@ The classifier datasets (digits, breast cancer, wine) ship with scikit-learn. To
 ebrt/core.py        scores, decision yardsticks, exploits, optimiser
 ebrt/data.py        simulated systems, real classifiers, forecast loader
 run_audit.py        runs every analysis
-figures.py          the two paper figures
+figures.py          the three paper figures
 build_report.py     writes the paper from results/ (no hand-typed numbers)
 supplement.py       writes the supplement from results/
 results/            released result tables
