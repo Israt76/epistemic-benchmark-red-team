@@ -1,0 +1,16 @@
+{
+ "n_systems": {
+  "synthetic": 150,
+  "classifiers": 80,
+  "forecasts": 9
+ },
+ "shopping_distinct_winners_mean": {
+  "classifiers": 2.93,
+  "synthetic": 3.11
+ },
+ "shopping_share_pools_with_3plus_winners": {
+  "classifiers": 0.6,
+  "synthetic": 0.784
+ },
+ "decision_ranking_flip_rate_easy_vs_hard": 0.076
+}

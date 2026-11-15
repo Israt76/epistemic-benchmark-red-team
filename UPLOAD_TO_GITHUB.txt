@@ -1,0 +1,20 @@
+UPLOAD TO GITHUB
+================
+Repository:
+https://github.com/Israt76/epistemic-benchmark-red-team
+
+EASIEST METHOD (GitHub website)
+1. Open the repository above.
+2. Click Add file > Upload files.
+3. Extract this ZIP on your computer first.
+4. Open the extracted folder named epistemic-benchmark-red-team-github-ready.
+5. Select/drag ALL files and folders INSIDE that folder into GitHub's upload area.
+   Do not upload the outer folder as one nested folder.
+6. Commit directly to the main branch with message:
+   Final Apart Research sprint submission
+
+Important:
+- This ZIP intentionally contains NO .git folder.
+- The repo is intended for branch: main.
+- report/report.pdf and report/report.docx are the latest corrected versions.
+- The presentation video is included under media/ and is under GitHub's web upload file-size limit.

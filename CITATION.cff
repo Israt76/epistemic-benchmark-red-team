@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Epistemic Benchmark Red Team: When Better Scores Mean Worse Decisions"
+authors:
+  - family-names: Aunika
+    given-names: Israt Jahan
+    affiliation: Montclair State University
+date-released: 2026-11-15
+license: MIT
+type: software
+abstract: "A red-team framework that tests whether epistemic evaluation scores can be improved without improving downstream decisions."

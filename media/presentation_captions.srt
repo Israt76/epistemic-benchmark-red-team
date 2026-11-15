@@ -1,0 +1,164 @@
+1
+00:00:00,000 --> 00:00:07,354
+Can an AI evaluation get a better score while the AI actually becomes less useful?
+
+2
+00:00:07,354 --> 00:00:15,855
+I'm Israt Jahan Aunika from Montclair State University, and this project red-teams the benchmarks themselves.
+
+3
+00:00:15,855 --> 00:00:19,425
+Benchmarks shape what developers optimise.
+
+4
+00:00:19,425 --> 00:00:21,056
+Here are two tricks.
+
+5
+00:00:21,056 --> 00:00:24,670
+First: report the same confidence for every answer.
+
+6
+00:00:24,670 --> 00:00:31,583
+The standard calibration metric says you are nearly perfect, but the user learns nothing about which answers to trust.
+
+7
+00:00:31,583 --> 00:00:35,013
+Second: refuse every question you might get wrong.
+
+8
+00:00:35,013 --> 00:00:38,792
+Your accuracy on what you answer looks superb.
+
+9
+00:00:38,792 --> 00:00:42,591
+Neither trick changes a single answer.
+
+10
+00:00:42,591 --> 00:00:46,544
+So I built a red-team test for the scoring rule itself.
+
+11
+00:00:46,544 --> 00:00:53,446
+An attacker may only edit a system's stated confidence or decide which questions to decline.
+
+12
+00:00:53,446 --> 00:00:55,378
+It never changes an answer.
+
+13
+00:00:55,378 --> 00:01:00,562
+It tunes each exploit on half the data and is judged on the other half.
+
+14
+00:01:00,562 --> 00:01:07,743
+Then I compare two things: what the benchmark sees, and what a user who acts on the answers actually gains.
+
+15
+00:01:07,743 --> 00:01:10,082
+The difference is the Integrity Gap.
+
+16
+00:01:10,082 --> 00:01:15,796
+When the score goes up and decisions get worse, I call that a harmful win.
+
+17
+00:01:15,796 --> 00:01:26,518
+I audited ten scores in common use, on eighty real classifiers, nine real forecast archives, and one hundred and fifty controlled simulated systems.
+
+18
+00:01:26,518 --> 00:01:31,072
+One honest caveat up front: no language model was run.
+
+19
+00:01:31,072 --> 00:01:36,972
+These are results about scoring rules, and they apply to any system scored by them.
+
+20
+00:01:36,972 --> 00:01:40,427
+Result one: confidence gaming.
+
+21
+00:01:40,427 --> 00:01:54,167
+Using one fixed confidence value, the attacker reduced calibration error by eighty-six percent on real classifiers, even though downstream decisions became worse for fifty-six percent of those systems.
+
+22
+00:01:54,167 --> 00:02:01,127
+On real forecasts, the error fell by fifty-three percent, and decisions got worse for eighty-nine percent.
+
+23
+00:02:01,127 --> 00:02:05,413
+Brier score and log loss resisted this attack.
+
+24
+00:02:05,413 --> 00:02:09,022
+Result two: strategic abstention.
+
+25
+00:02:09,022 --> 00:02:13,381
+When the attacker may decline questions, it declines most of them.
+
+26
+00:02:13,381 --> 00:02:24,298
+Selective accuracy, hallucination rate, Brier score and log loss all improve, while decisions get worse for at least eighty-nine percent of systems in every setting.
+
+27
+00:02:24,298 --> 00:02:29,168
+Brier is a proper scoring rule, but only for the confidences it sees.
+
+28
+00:02:29,168 --> 00:02:34,615
+Drop the refused questions from the average, and refusing is rewarded.
+
+29
+00:02:34,615 --> 00:02:39,160
+Putting it together gives each score an Integrity Profile.
+
+30
+00:02:39,160 --> 00:02:44,193
+Calibration error is vulnerable to confidence gaming and ranks systems poorly.
+
+31
+00:02:44,193 --> 00:02:47,879
+Brier and log loss are vulnerable to abstention.
+
+32
+00:02:47,879 --> 00:02:51,727
+Accuracy is hard to game but blind to confidence.
+
+33
+00:02:51,727 --> 00:03:00,100
+The net-benefit score, which charges every refusal the value it withheld, is the strongest overall.
+
+34
+00:03:00,100 --> 00:03:07,966
+The hardened score had zero percent harmful wins under the primary yardstick across all three data sources.
+
+35
+00:03:07,966 --> 00:03:12,812
+Under the low-stakes robustness profile, its worst case was eight percent.
+
+36
+00:03:12,812 --> 00:03:17,005
+I do not claim that score as new; it belongs to a known family.
+
+37
+00:03:17,005 --> 00:03:26,624
+The contribution is the red-team procedure, the measurements on real data, and the closure test: any repair has to survive the same attack.
+
+38
+00:03:26,624 --> 00:03:31,700
+Better benchmark scores do not necessarily mean better decisions.
+
+39
+00:03:31,700 --> 00:03:38,601
+The individual weaknesses were partly known; what is new here is one test that measures them and checks a fix.
+
+40
+00:03:38,601 --> 00:03:44,710
+Epistemic evaluations should themselves be adversarially evaluated before they are trusted.
+
+41
+00:03:44,710 --> 00:03:46,837
+Thank you.
+

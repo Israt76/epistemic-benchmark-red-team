@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" font-family="Inter, DejaVu Sans, sans-serif">
+  <rect width="1920" height="1080" fill="#0F1B33"/>
+  <g stroke="#1B2B4D" stroke-width="1">
+    <path d="M0 180H1920M0 360H1920M0 540H1920M0 720H1920M0 900H1920M240 0V1080M480 0V1080M720 0V1080M960 0V1080M1200 0V1080M1440 0V1080M1680 0V1080"/>
+  </g>
+  <text x="110" y="150" fill="#9AA5B8" font-size="26" font-weight="600" letter-spacing="4">A RED-TEAM STUDY OF AI EVALUATION METRICS</text>
+  <text x="110" y="250" fill="#FFFFFF" font-size="86" font-weight="800">Epistemic Benchmark Red Team</text>
+  <text x="110" y="330" fill="#E9EDF5" font-size="46" font-weight="500">When Better Scores Mean Worse Decisions</text>
+
+  <!-- left panel: benchmark score up -->
+  <rect x="110" y="410" width="560" height="430" rx="22" fill="#18294A" stroke="#2B3F68" stroke-width="2"/>
+  <text x="150" y="470" fill="#9AA5B8" font-size="26" font-weight="600" letter-spacing="2">BENCHMARK SCORE</text>
+  <path d="M230 720 A160 160 0 0 1 550 720" fill="none" stroke="#2B3F68" stroke-width="30" stroke-linecap="round"/>
+  <path d="M230 720 A160 160 0 0 1 529 640" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-linecap="round"/>
+  <line x1="390" y1="720" x2="505" y2="652" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="390" cy="720" r="16" fill="#FFFFFF"/>
+  <text x="390" y="800" fill="#FFFFFF" font-size="48" font-weight="800" text-anchor="middle">▲ improves</text>
+
+  <!-- middle: red-team pipeline -->
+  <line x1="690" y1="625" x2="800" y2="625" stroke="#9AA5B8" stroke-width="4" stroke-dasharray="10 10"/>
+  <line x1="1120" y1="625" x2="1230" y2="625" stroke="#9AA5B8" stroke-width="4" stroke-dasharray="10 10"/>
+  <circle cx="960" cy="625" r="150" fill="#18294A" stroke="#D0443A" stroke-width="5"/>
+  <circle cx="960" cy="625" r="96" fill="none" stroke="#D0443A" stroke-width="5"/>
+  <circle cx="960" cy="625" r="14" fill="#D0443A"/>
+  <path d="M960 445V535M960 715V805M780 625H870M1050 625H1140" stroke="#D0443A" stroke-width="6" stroke-linecap="round"/>
+  <!-- calibration curve inside the target -->
+  <path d="M895 690 L1025 560" stroke="#9AA5B8" stroke-width="3" stroke-dasharray="6 6"/>
+  <path d="M895 690 C940 688 950 600 1025 592" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <text x="960" y="850" fill="#F08A80" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="3">RED-TEAM THE SCORING RULE</text>
+
+  <!-- right panel: decision quality down -->
+  <rect x="1250" y="410" width="560" height="430" rx="22" fill="#18294A" stroke="#2B3F68" stroke-width="2"/>
+  <text x="1290" y="470" fill="#9AA5B8" font-size="26" font-weight="600" letter-spacing="2">DECISION QUALITY</text>
+  <path d="M1310 540V720H1750" fill="none" stroke="#2B3F68" stroke-width="4"/>
+  <path d="M1320 560 L1410 585 L1500 615 L1590 660 L1680 690 L1740 708" fill="none" stroke="#D0443A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#D0443A"><circle cx="1320" cy="560" r="9"/><circle cx="1410" cy="585" r="9"/><circle cx="1500" cy="615" r="9"/><circle cx="1590" cy="660" r="9"/><circle cx="1680" cy="690" r="9"/><circle cx="1740" cy="708" r="9"/></g>
+  <text x="1530" y="800" fill="#F08A80" font-size="48" font-weight="800" text-anchor="middle">▼ gets worse</text>
+
+  <text x="960" y="945" fill="#FFFFFF" font-size="38" font-weight="700" text-anchor="middle">80 real classifiers  ·  9 forecast archives  ·  150 simulated systems</text>
+  <text x="960" y="1005" fill="#9AA5B8" font-size="28" font-weight="500" text-anchor="middle">Stress-testing AI evaluations before we trust them</text>
+</svg>
